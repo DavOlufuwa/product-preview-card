@@ -32,15 +32,12 @@ body{
     
 }
 
-.image{
-    background: url("../images/image-product-mobile.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+.image>img{
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
-    display: flex;
-    width: 100%;
+    display: block;
     height: 100%;
+    width: 100%;
 }
 .content{
     padding: 0 1.5rem;
@@ -96,36 +93,41 @@ s{
     font-weight: 700;
     color: var(--white);
     margin-bottom: 1.5rem;
-    
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsl(158, 18%, 37%);
+    transition: all 0.3s ease;
 }
 button>span{
     margin-left: 0.5rem;
 }
 
-@media(min-width:800px){
+@media(min-width:700px){
     
     .card{
         flex-direction: row;
         gap: unset; 
         margin: calc(100vh - 80vh) auto;
-        max-width: 40rem;
+        max-width: 38rem;
         
+    }
+    .image>img{
+        display: none;
     }
     .image{
         background-image: url("../images/image-product-desktop.jpg");
         background-size: cover;
         background-repeat: no-repeat; 
         border-bottom-left-radius: 16px;
-        border-top-right-radius: 0px;
-       width: 50%; 
+        border-top-left-radius: 16px;
+        width: 50%; 
     }
     .content{
         width: 50%;
+        padding: .5rem 2rem;
     }
     .c1{
         margin-top: 1.5rem;
     }
-
-
- 
 }
